@@ -1,0 +1,13 @@
+[Unit]
+Description=RTSP-Server
+After=network.target
+Requires=uv4l_raspicam.service
+
+[Service]
+User=pi
+Environment=LD_PRELOAD=:/usr/lib/uv4l/uv4lext/armv6l/libuv4lext.so
+TimeoutStartSec=0
+ExecStart=/usr/local/bin/v4l2rtspserver -Q 3 -u '' -f
+
+[Install]
+WantedBy=multi-user.target

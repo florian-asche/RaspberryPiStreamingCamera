@@ -1,0 +1,36 @@
+dist: trusty
+sudo: required
+addons:
+  apt:
+    packages:
+    - quilt
+    - parted
+    - realpath
+    - qemu-user-static
+    - debootstrap
+    - zerofree
+    - pxz
+    - zip
+    - dosfstools
+    - libcap2-bin
+    - bsdtar
+    - grep
+    - rsync
+    - xz-utils
+    - tree
+    - nscd
+script:
+- sudo chmod +x build.sh ; sudo bash ./build.sh
+- ls -lahR deploy
+deploy:
+  provider: releases
+  api_key:
+    secure: 1LuEdcikicuZYtnyEfh0NirsyktI6xcAEkmw7HF3IQisg/6v41CMkn41C0AUJiRF859uSuzkfWtY7KLekCmI9ivSHe24cPZlj6RH3a3NXxmMLqXhExszkKMAACuN1txgvlJqcH3XNr2lNc4kOkAJxGfkPN/i1kZJ6Su/Rs/dJyPInyZD/9Q4MXDfHU8AYuOmFRjTv1lfqWmjwqWqRRv1B9GdxLhR9Zq7KqqLNj16x+MfEtHhX6nUkY9Ul+rX940qfwaSI47AiV8O87p1ecxAZcPaSykX0vHcSA4srbojaqsYuzdCt8AHrGN3B9GwZksGMq3U0zsfaE3UpHKZYrHNmjChuq+njRvsaO7cLPC1amYZriM029hj8RKf0bU4Ns5IyDSkd7Bs6tukcaKgvuCUFjY85forcnNCL8sBjeoCq4B6TMKene70l+4iGXitlk6dgg7Q1VKBGoS6c4wrFRll0UR2NdVR79qM7+xmuZfI0EkHWmDTVmFEEPBt1RUkwiUh962A/6tBw9bVX1XfAszJUGME6tckSrnDy5XmHykQLfF/l/oqoBrwwit9xWR2ts25DJ7Cuaqt6Ju/4uMA6Pmrn7WKMFBdRVJ/oW0kYhLbIi0Jw9ixy+nSnymihcA3WhpAHIXpCYangVHW9c4fM0G4QZ7OWPOAHvx7VxClka0icao=
+  file: deploy/image-StreamingCamera-lite.zip
+  skip_cleanup: true
+  on:
+    repo: florian-asche/RaspberryPiStreamingCamera
+    tags: true
+cache:
+    apt: true
+    
