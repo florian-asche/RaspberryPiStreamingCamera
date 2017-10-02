@@ -37,7 +37,8 @@ Thanks to https://github.com/RPi-Distro/pi-gen for the Image Buildprocess.
 ## Build your own image:
 * checkout this repository
 * install files from depends
-* ./build.sh
+* ./build-docker.sh
+* docker rm pigen_work
 
 ## Install script manually on existing device:
 * checkout this repository
@@ -50,9 +51,8 @@ cd stage3
 ```
 * Enable camera
 ```shell
-cd 00-raspberrypistreamingcamera-enable_camera/files/
-./script.sh
-cd ..
+raspi-config
+[...]
 ```
 * Install Software and configure them
 ```shell

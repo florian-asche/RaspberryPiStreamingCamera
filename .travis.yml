@@ -1,26 +1,9 @@
 dist: trusty
 sudo: required
-addons:
-  apt:
-    packages:
-    - quilt
-    - parted
-    - realpath
-    - qemu-user-static
-    - debootstrap
-    - zerofree
-    - pxz
-    - zip
-    - dosfstools
-    - libcap2-bin
-    - bsdtar
-    - grep
-    - rsync
-    - xz-utils
-    - tree
-    - nscd
+services:
+  - docker
 script:
-- sudo chmod +x build.sh ; sudo bash ./build.sh
+- sudo bash ./build-docker.sh
 - ls -lahR deploy
 deploy:
   provider: releases
