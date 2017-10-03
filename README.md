@@ -69,6 +69,13 @@ cd /installfiles/
 ./make_me_readonly.sh
 ```
 
+## Configuration:
+The configuration is made the best way i could find. It should be perfect. If you still want to change that, you can to so here:
+```shell
+sudo su
+cd /etc/uv4l/
+```
+
 ## Thanks:
 * Thanks to https://github.com/RPi-Distro/pi-gen for the Image Buildprocess.
 * Thanks to https://github.com/ronnyvdbr/RaspberryIPCamera, my project was based on his work.
