@@ -3,7 +3,7 @@ This project uses the Raspberry Pi Camera. The image will be streamed in H.264 o
 This project is meant to be very secure, therefore we renounce e.g. on a web interface, which whould provides an attack area.
 
 ## Build:
-The Build on Travis-CI failed due to missing binfmt-support. Iam now using my own Build System.
+The Build on Travis-CI failed due to missing binfmt-support. I am now using my own Build System.
 
 ## Used Software by this project:
 * Raspbian Jessie (minmal) image.
