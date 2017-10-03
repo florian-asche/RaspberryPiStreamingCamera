@@ -56,6 +56,6 @@
 dtparam=audio=on
 
 # enable camera
-#start_x 1
-gpu_mem 128
+start_x=1
+gpu_mem=128
 
