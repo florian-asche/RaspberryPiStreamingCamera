@@ -11,8 +11,8 @@ The Build on Travis-CI failed due to missing binfmt-support. I am now using my o
 * The RTSP server from https://github.com/mpromonet/h264_v4l2_rtspserver
 
 ## Hardware Tips:
-* You can buy a Raspberry Pi Zero W (very small) with Wirless Onboard and a Housing here: https://buyzero.de/collections/boards-kits/products/copy-of-raspberry-pi-zero-w?variant=31485043090
-* All other nesessary things you can also get there. 
+* You can find a Raspberry Pi Zero W (very small) with Wirless Onboard and a Housing here: https://buyzero.de/collections/boards-kits/products/copy-of-raspberry-pi-zero-w?variant=31485043090
+* All other nesessary things you can also find there. 
 * With that hardware setup you get 25FPS in 720p H264 over RTSP.
 
 ## Howto:
